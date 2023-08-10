@@ -5,4 +5,4 @@ for index in range(0, 26):
         letter = chr(letter - 32)
     else:
         letter = chr(letter)
-    print(f"{letter}", end='')
+    print("{}".format(letter), end='')
