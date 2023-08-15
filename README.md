@@ -1,6 +1,6 @@
 **ALX-Higher_Level_Programming Repository**
 
-Welcome to the ALX-Higher_Level_Programming repository! This repository is dedicated to advanced programming concepts and projects, with a focus on languages like Python and JavaScript. It offers a collection of challenging exercises and projects designed to deepen your understanding of programming principles and enhance your problem-solving skills.
+Welcome to the ALX-Higher_Level_Programming repository! This repository is dedicated to advanced programming concepts and projects, with a focus on languages like Python. It offers a collection of challenging exercises and projects designed to deepen your understanding of programming principles and enhance your problem-solving skills.
 
 ## Table of Contents
 
