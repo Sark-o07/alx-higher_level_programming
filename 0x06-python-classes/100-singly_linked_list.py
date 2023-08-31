@@ -29,12 +29,13 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-        if not isinstance(value, Node):  # Allow None as well
+        if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
 
 class SinglyLinkedList:
+
     def __init__(self):
         """Initialize a new SinglyLinkedList."""
         self.__head = None
@@ -73,5 +74,5 @@ class SinglyLinkedList:
         temp = self.__head
         while temp is not None:
             values.append(str(temp.data))
-            temp = tenp.next.node
+            temp = temp.next_node
         return '\n'.join(values)
