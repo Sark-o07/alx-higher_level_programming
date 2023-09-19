@@ -46,7 +46,7 @@ class Base:
                 temp_list = []
                 for obj in list_objs:
                     temp_list += obj.to_dictionary()
-                jsonfile.write(cls.to_json_string(temp_list))
+                jsonfile.write(Base.to_json_string(temp_list))
 
     def from_json_string(json_string):
         """Returns the list of the JSON string rep json_string
@@ -78,7 +78,7 @@ class Base:
             filename = cls.__name__ + ".json"
             with open(filename, r) as jsonfile:
                 json_string = jsonfile.read()
-                dicts_list = cls.from_json_string(json_string)
+                dicts_list = Base.from_json_string(json_string)
                 return [cls.create(**d) for d in dicts_list]
         except IOError:
             return []
