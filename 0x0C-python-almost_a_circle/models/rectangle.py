@@ -84,7 +84,7 @@ class Rectangle(Base):
     def __str__(self):
         """returns a formatted string desc of the rectangle instance"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
-                                                      self.width, self.height)
+                                                       self.width, self.height)
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
