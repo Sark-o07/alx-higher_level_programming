@@ -23,7 +23,7 @@ class Square(Rectangle):
 
     def __str__(self):
         """"returns formatted string desc of the square instance"""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
+        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id, self.x,
                                                  self.y, self.size)
 
     def update(self, *args, **kwargs):

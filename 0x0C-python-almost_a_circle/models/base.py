@@ -78,8 +78,8 @@ class Base:
     def load_from_file(cls):
         """Returns a list of instances
         """
+        filename = str(cls.__name__) + ".json"
         try:
-            filename = cls.__name__ + ".json"
             with open(filename, "r") as jsonfile:
                 json_string = jsonfile.read()
                 dicts_list = Base.from_json_string(json_string)
