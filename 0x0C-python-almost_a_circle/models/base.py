@@ -40,7 +40,7 @@ class Base:
             list_objs (list): list of class instances
         """
         filename = cls.__name__ + ".json"
-        with open(filename, w) as jsonfile:
+        with open(filename, "w") as jsonfile:
             if list_objs is None:
                 jsonfile.write("[]")
             else:
@@ -80,7 +80,7 @@ class Base:
         """
         try:
             filename = cls.__name__ + ".json"
-            with open(filename, r) as jsonfile:
+            with open(filename, "r") as jsonfile:
                 json_string = jsonfile.read()
                 dicts_list = Base.from_json_string(json_string)
                 return [cls.create(**d) for d in dicts_list]
