@@ -29,7 +29,7 @@ class Base:
         Args:
             list_dictionaries (list): a list of dictionaries.
         """
-        if list_dictionaries is not None or list_dictionaries != []:
+        if list_dictionaries or list_dictionaries != []:
             return json.dumps(list_dictionaries)
         return "[]"
 
@@ -44,9 +44,7 @@ class Base:
             if list_objs is None:
                 jsonfile.write("[]")
             else:
-                temp_list = []
-                for obj in list_objs:
-                    temp_list += obj.to_dictionary()
+                temp_list = [o.to_dictionary() for o in list_objs]]
                 jsonfile.write(Base.to_json_string(temp_list))
 
     @staticmethod
