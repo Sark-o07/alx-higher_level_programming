@@ -33,6 +33,7 @@ class Base:
             return json.dumps(list_dictionaries)
         return "[]"
 
+    @classmethod
     def save_to_file(cls, list_objs):
         """writes the json string rep of list_objs to a file
         Args:
@@ -48,6 +49,7 @@ class Base:
                     temp_list += obj.to_dictionary()
                 jsonfile.write(Base.to_json_string(temp_list))
 
+    @staticmethod
     def from_json_string(json_string):
         """Returns the list of the JSON string rep json_string
         Args:
@@ -58,6 +60,7 @@ class Base:
         else:
             return json.loads(json_string)
 
+    @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all attributes already set
         Args:
@@ -71,6 +74,7 @@ class Base:
             new.update(**dictionary)
             return new
 
+    @classmethod
     def load_from_file(cls):
         """Returns a list of instances
         """
