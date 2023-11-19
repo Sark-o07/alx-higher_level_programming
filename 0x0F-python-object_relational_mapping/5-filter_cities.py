@@ -10,14 +10,13 @@ if __name__ == "__main__":
     cur = db.cursor()
     match = sys.argv[4]
     cur.execute("""
-        SELECT cities.id, cities.name, states.name
+        SELECT cities.name
         FROM cities
         INNER JOIN states ON states.id=cities.state_id
         WHERE states.name = %s
-        ORDER BY cities.id ASC
         """, (match,))
     rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    tmp = [row[0] for row in rows]
+    print(*tmp, sep=", ")
     cur.close()
     db.close()
